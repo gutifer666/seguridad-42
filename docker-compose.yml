@@ -1,0 +1,12 @@
+services:
+  mysql:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=conCiber
+      - MYSQL_USER=conCiber
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
